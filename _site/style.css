@@ -1,0 +1,465 @@
+:root {
+  --bg: #11161A;
+  --panel: #1A2126;
+  --line: #2E3A40;
+  --text: #ECE7DA;
+  --muted: #A7B0AA;
+  --accent: #7CC4B3;
+  --bronze: #D1A25E;
+  --display: 'Cormorant Garamond', serif;
+  --body: 'Inter', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+a { 
+  color: var(--accent);
+  text-decoration: none; 
+}
+
+a:hover, a:focus-visible {
+  color: var(--text);
+}
+
+.wrap {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Navigation Bar */
+.site-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.logo {
+  font-family: var(--display);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.site-nav {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 8px 24px; 
+  font-size: 14px; 
+  font-weight: 500;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--bronze);
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: center;
+  padding-top: 72px;
+  padding-bottom: 56px;
+}
+.hero-text {
+  flex: 1 1 480px;
+  min-width: 0;
+}
+
+.hero-media {
+  flex: 1 1 340px; 
+  min-width: 0;
+}
+
+.hero-media img {
+  width: 100%; 
+  height: 440px; 
+  object-fit: cover; 
+  display: block;
+}
+
+.kicker {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bronze);
+}
+
+h1 {
+  margin: 8px 0 20px;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(64px, 10vw, 112px);
+  line-height: 0.95;
+}
+
+.tagline {
+  margin: 0;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 30px;
+  line-height: 1.25;
+  color: var(--accent);
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 40px;
+  margin: 32px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.facts dt {
+  color: var(--muted);
+}
+
+.facts dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* ---------- Section jump links ---------- */
+.jump {
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.jump .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.jump span {
+  color: var(--bronze);
+  margin-right: 6px;
+}
+
+/* ---------- Content sections ---------- */
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 56px;
+  padding-top: 72px;
+}
+
+.section:last-of-type {
+  padding-bottom: 80px;
+}
+
+.section-label {
+  flex: 0 1 220px;
+  min-width: 0;
+}
+
+.section-body {
+  flex: 999 1 480px;
+  min-width: 0;
+  max-width: 700px;
+}
+
+.section-body.wide {
+  max-width: none;
+}
+
+.num {
+  font-family: var(--display);
+  font-size: 80px;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.label {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bronze);
+}
+
+h2 {
+  margin: 0 0 16px;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.15;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+/* Intro */
+.traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.traits div {
+  flex: 1 1 140px;
+}
+
+.traits strong {
+  display: block;
+  color: var(--bronze);
+}
+
+/* Effects: pull quote */
+.pullquote {
+  margin: 28px 0 0;
+  padding-top: 16px;
+  border-top: 2px solid var(--bronze);
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 32px;
+  line-height: 1.25;
+}
+
+/* ---------- Artifact cards ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  background: var(--panel);
+}
+
+.card h3 {
+  margin: 12px 0;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.credit {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* ---------- Rituals list ---------- */
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.steps li {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+}
+
+.steps li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.steps .n {
+  flex: 0 0 40px;
+  font-family: var(--display);
+  font-size: 32px;
+  line-height: 1.1;
+  color: var(--bronze);
+}
+
+.steps strong {
+  display: block;
+}
+
+.steps span {
+  color: var(--muted);
+}
+
+/* ---------- Prev / next ---------- */
+.pager {
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+}
+
+.pager .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.site-footer .wrap {
+  padding-top: 40px;
+  padding-bottom: 32px;
+}
+
+.footer-cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 56px;
+}
+
+.footer-cols > div {
+  flex: 1 1 200px;
+}
+
+.footer-cols h4 {
+  margin: 0 0 6px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer-note {
+  margin-top: 32px;
+  font-size: 13px;
+}
+
+.notes {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.notes li {
+  padding: 6px 0 6px 6px;
+}
+
+sup a {
+  font-size: 0.75em;
+  padding: 0 2px;
+}
+
+.section-body h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #927858;
+  margin: 2rem 0 0.5rem;
+  padding: 0;
+  border: none;
+}
+
+.section-body h2 + h3 {
+  margin-top: 1.25rem;
+}
+
+.section-body h3 + p {
+  margin-top: 0;
+  line-height: 1.8;
+}
+
+/* BIBLIOGRAPHY */
+.bib {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bib li {
+  padding-left: 0.5in;
+  text-indent: -0.5in;
+  margin-bottom: 1.4em;     /* one blank line between entries */
+  line-height: 1.4;         /* single spacing within an entry */
+  max-width: 760px;
+  overflow-wrap: anywhere;  /* lets long URLs wrap instead of overflowing */
+}
+ 
+/* Keep the bibliography subheadings a little closer to their lists */
+.section-body h3 + .bib {
+  margin-top: 0.5rem;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 760px) {
+  .wrap {
+    padding: 0 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+
+  .section {
+    padding-top: 48px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .tagline {
+    font-size: 24px;
+  }
+
+  .pullquote {
+    font-size: 26px;
+  }
+}

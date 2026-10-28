@@ -412,6 +412,26 @@ sup a {
   line-height: 1.8;
 }
 
+/* BIBLIOGRAPHY */
+.bib {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bib li {
+  padding-left: 0.5in;
+  text-indent: -0.5in;
+  margin-bottom: 1.4em;     /* one blank line between entries */
+  line-height: 1.4;         /* single spacing within an entry */
+  max-width: 760px;
+  overflow-wrap: anywhere;  /* lets long URLs wrap instead of overflowing */
+}
+ 
+/* Keep the bibliography subheadings a little closer to their lists */
+.section-body h3 + .bib {
+  margin-top: 0.5rem;
+}
 
 /* ---------- Small screens ---------- */
 @media (max-width: 760px) {

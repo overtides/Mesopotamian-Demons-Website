@@ -31,3 +31,6 @@ vendor/cache/
 .env
 .env.*
 !.env.example
+
+# Old version
+pazuzu copy.html

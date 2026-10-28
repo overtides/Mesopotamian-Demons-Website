@@ -36,7 +36,7 @@ a:hover, a:focus-visible {
   padding: 0 40px;
 }
 
-/* Navigation Bar */
+/* SITE NAV BAR */
 .site-header {
   border-bottom: 1px solid var(--line);
 }
@@ -70,7 +70,7 @@ a:hover, a:focus-visible {
   color: var(--bronze);
 }
 
-/* Hero */
+/* HERO */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -141,7 +141,7 @@ h1 {
   font-weight: 600;
 }
 
-/* ---------- Section jump links ---------- */
+/* SECTION NAV */
 .jump {
   background: var(--panel);
   border-top: 1px solid var(--line);
@@ -163,7 +163,7 @@ h1 {
   margin-right: 6px;
 }
 
-/* ---------- Content sections ---------- */
+/* CONTENT SECTIONS */
 .section {
   display: flex;
   flex-wrap: wrap;
@@ -218,7 +218,7 @@ p {
   margin: 0 0 18px;
 }
 
-/* Intro */
+/* INTRO */
 .traits {
   display: flex;
   flex-wrap: wrap;
@@ -239,7 +239,7 @@ p {
   color: var(--bronze);
 }
 
-/* Effects: pull quote */
+/* QUOTE  */
 .pullquote {
   margin: 28px 0 0;
   padding-top: 16px;
@@ -250,7 +250,7 @@ p {
   line-height: 1.25;
 }
 
-/* ---------- Artifact cards ---------- */
+/* ARTIFACTS */
 .cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -287,7 +287,7 @@ p {
   margin-top: 4px;
 }
 
-/* ---------- Rituals list ---------- */
+/* RITUALS */
 .steps {
   margin: 0;
   padding: 0;
@@ -321,7 +321,7 @@ p {
   color: var(--muted);
 }
 
-/* ---------- Prev / next ---------- */
+/* PREV/NEXT PAGE NEAR BOTTOM */
 .pager {
   background: var(--panel);
   border-top: 1px solid var(--line);
@@ -428,12 +428,11 @@ sup a {
   overflow-wrap: anywhere;  /* lets long URLs wrap instead of overflowing */
 }
  
-/* Keep the bibliography subheadings a little closer to their lists */
 .section-body h3 + .bib {
   margin-top: 0.5rem;
 }
 
-/* ---------- Small screens ---------- */
+/* SMALL/MOBILE ADJUSTMENTS */
 @media (max-width: 760px) {
   .wrap {
     padding: 0 20px;

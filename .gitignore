@@ -1,0 +1,33 @@
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Jekyll generated site
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby dependencies
+.bundle/
+vendor/bundle/
+vendor/cache/
+
+# Logs
+*.log
+
+# Editor settings
+.vscode/
+.idea/
+
+# Temporary files
+*.swp
+*.swo
+*~
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example

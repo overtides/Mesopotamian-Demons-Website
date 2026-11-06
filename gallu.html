@@ -17,8 +17,8 @@ title: Gallu
       </dl>
     </div>
     <div class="hero-media">
-      <img src="images/gallu/Intro Image.jpg">
-      <div class="credit" style="margin-top: 9px;">© The Trustees of the British Museum. Shared under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license</a>.</div>
+      <img src="images/gallu/Intro Image.jpg" alt="Cylinder Seal containing Gallu">
+      <div class="credit">© <a href="https://www.britishmuseum.org/collection/object/W_1933-0408-1">Cylinder seal</a> from the Trustees of the British Museum. Shared under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license</a>.</div>
     </div>
   </div>
 
@@ -60,9 +60,9 @@ title: Gallu
       <div class="label">Effects</div>
     </div>
     <div class="section-body">
-      <h2>Role</h2>
-      <p>Role Info.</p>
-      <blockquote class="pullquote">Role Quote.</blockquote>
+      <h2>How {{ page.title }} shaped Mesopotamian life</h2>
+      <p>Talk about {{ page.title }}'s impact here.</p>
+      <blockquote class="pullquote">Quote.</blockquote>
     </div>
   </section>
 
@@ -74,26 +74,41 @@ title: Gallu
     </div>
     <div class="section-body wide">
       <h2>What he left behind</h2>
-      <ul class="cards">
-        <li class="card">
-          <img src="image1.jpg" alt="What it is">
-          <h3>"What it is"</h3>
-          <p>Small description.</p>
-          <div class="credit">[Museum / credit]</div>
+      <div class="carousel">
+        <button class="arrow arrow-prev" type="button" aria-label="Previous artifact" hidden></button>
+        <ul class="cards" tabindex="0" aria-label="Artifacts">
+          <!-- Artifact 1 -->
+          <li class="card">
+          <img src="" alt="Description">
+          <h3>Artifact 1</h3>
+          <p>Description.<sup id="ref2"><a href="#fn2">2</a></sup></p>
+          <div class="credit">Image source.</div>
         </li>
+          <!-- Artifact 2 -->
         <li class="card">
-          <img src="image2.jpg" alt="What it is">
-          <h3>"What it is"</h3>
-          <p>Small description.</p>
-          <div class="credit">[Museum / credit]</div>
-        </li>
+          <img src="" alt="Description">
+          <h3>Artifact 2</h3>
+          <p>Description.<sup id="ref2"><a href="#fn2">2</a></sup></p>
+          <div class="credit">Image source.</div>
+        </li>          
+        <!-- Artifact 3 -->
         <li class="card">
-          <img src="image3.jpg" alt="What it is">
-          <h3>"What it is"</h3>
-          <p>Small description.</p>
-          <div class="credit">[Museum / credit]</div>
+          <img src="" alt="Description">
+          <h3>Artifact 3</h3>
+          <p>Description.<sup id="ref2"><a href="#fn2">2</a></sup></p>
+          <div class="credit">Image source.</div>
         </li>
+        <!-- Artifact 4 -->
+        <li class="card">
+          <img src="" alt="Description">
+          <h3>Artifact 4</h3>
+          <p>Description.<sup id="ref2"><a href="#fn2">2</a></sup></p>
+          <div class="credit">Image source.</div>
+        </li>
+
       </ul>
+      <button class="arrow arrow-next" type="button" aria-label="Next artifact" hidden></button>
+      </div>
     </div>
   </section>
 
@@ -125,7 +140,7 @@ title: Gallu
     </div>
   </section>
   
-<!-- TRIVIA / EXTRA FACTS -->
+  <!-- TRIVIA / EXTRA FACTS -->
   <section class="wrap section" id="trivia">
   <div class="section-label">
       <div class="num">05</div>
@@ -144,28 +159,15 @@ title: Gallu
   <section class="wrap section" id="secondary">
     <div class="section-label">
       <div class="num">06</div>
-      <div class="label">Secondary Source Analysis</div>
+      <div class="label">Important Secondary Sources</div>
     </div>
     <div class="section-body">
       <h2>How Scholars Understand {{ page.title }}</h2>
-
           <h3>1. [Author] — [Source Title]</h3>
-          <p>
-          Explain the author's argument, key findings,
-          and relevance to your research.
-          </p>
+          <p>Discuss and analyze source.</p>
 
           <h3>2. [Author] — [Source Title]</h3>
-          <p>
-          Discuss this source's argument and how it
-          contributes to your understanding of Pazuzu.
-          </p>
-
-          <h3>Comparing the Secondary Sources</h3>
-          <p>
-          Explain how the sources relate to one another
-          and what they reveal about your thesis.
-          </p>
+          <p>Discuss and analyze source.</p>
       </div>
   </section>
 
@@ -177,16 +179,17 @@ title: Gallu
     </div>
     <div class="section-body">
       <h3>Primary Source 1</h3>
-      <p>Your description and analysis of the source...</p>
+      <p>Discuss and analyze source.</p>
 
       <h3>Primary Source 2</h3>
-      <p>Your description and analysis of the source...</p>
+      <p>Discuss and analyze source.</p>
 
       <h3>Primary Source 3</h3>
-      <p>Your description and analysis of the source...</p>
+      <p>Discuss and analyze source.</p>
   </div>
-    </div>
   </section>
+
+
 
   <!-- FOOTNOTES -->
   <section class="wrap section" id="footnotes">
@@ -210,3 +213,5 @@ title: Gallu
     <a href="{{ '/lamashtu.html' | relative_url}}">Next: Lamashtu →</a>
   </div>
 </div>
+
+<script src="{{ '/gallery.js' | relative_url }}"></script>

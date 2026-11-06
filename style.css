@@ -183,11 +183,11 @@ h1 {
 .section-body {
   flex: 999 1 480px;
   min-width: 0;
-  max-width: 700px;
+  padding: 0 56px;
 }
 
-.section-body.wide {
-  max-width: none;
+.section-body > p {
+  max-width: 700px;
 }
 
 .num {
@@ -250,15 +250,85 @@ p {
   line-height: 1.25;
 }
 
-/* ARTIFACTS */
-.cards {
+/* ARTIFACT CAROUSEL */
+.carousel {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 100px;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  place-items: center;
+  border: 1px solid var(--bronze);
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--bronze);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, opacity 0.15s;
+}
+
+.arrow[hidden] {
+  display: none;
+}
+
+.arrow:hover, .arrow:focus-visible {
+  background: var(--bronze);
+  color: var(--bg);
+}
+
+.arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+  background: var(--bg);
+  color: var(--bronze);
+}
+
+.arrow svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.arrow-prev {
+  left: -54px;
+}
+
+.arrow-next {
+  right: -54px
+}
+
+.cards {
+  display: flex;
   gap: 24px;
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 calc((100% - 48px) / 3);
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
 .card img {
   width: 100%;
   height: 200px;
@@ -354,11 +424,16 @@ p {
 .footer-cols {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 32px 56px;
 }
 
 .footer-cols > div {
-  flex: 1 1 200px;
+  flex: 0 1 auto;
+}
+
+.footer-cols > div:last-child {
+  text-align: right;
 }
 
 .footer-cols h4 {
@@ -438,8 +513,16 @@ sup a {
     padding: 0 20px;
   }
 
-  .cards {
-    grid-template-columns: 1fr;
+  .card {
+    flex-basis: 100%;
+  }
+
+  .arrow-prev {
+    left: -10px;
+  }
+
+  .arrow-next {
+    right: -10px;
   }
 
   .hero {
@@ -448,6 +531,10 @@ sup a {
 
   .section {
     padding-top: 48px;
+  }
+
+  .section-body {
+    padding: 0;
   }
 
   h2 {

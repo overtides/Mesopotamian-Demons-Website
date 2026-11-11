@@ -186,7 +186,11 @@ h1 {
   padding: 0 56px;
 }
 
-.section-body > p {
+.section-body > p,
+.steps,
+.notes,
+.traits,
+.bib li {
   max-width: 700px;
 }
 
@@ -324,7 +328,7 @@ p {
 }
 
 .card {
-  flex: 0 0 calc((100% - 48px) / 3);
+  flex: 0 0 260px;
   min-width: 0;
   scroll-snap-align: start;
 }
